@@ -12,7 +12,7 @@ from characters.models import Character
 from characters.serializers import CharacterSerializer
 
 
-#function base-view (api)
+# FUNCTION BASE VIEW (API)
 @extend_schema(
     responses={status.HTTP_200_OK: CharacterSerializer},
 )
@@ -26,6 +26,7 @@ def get_random_characters_view(request: Request) -> Response:
     return Response(serializer.data, status=status.HTTP_200_OK)
 
 
+# CLASS BASE VIEW (generics) ListAPIView
 class CharacterListView(generics.ListAPIView):
     serializer_class = CharacterSerializer
 
