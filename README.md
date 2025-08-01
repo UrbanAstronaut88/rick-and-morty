@@ -16,6 +16,8 @@
 * Create venv: ```python -m venv venv```
 * Activate it: (macOS source venv/bin/activate)
 * Install requirements: ```pip install -r requirements.txt```
+* Create new Postgres DB & User
+* Copy .env.sample -> .env and populate with all required data
 * Run migrations: ```python manage.py migrate```
 * Run Redis server: ```docker run -d -p 6379:6379 redis```
 * Run Celery worker for tasks handling: ```celery -A rick_and_morty_api worker -l info --pool=solo```
